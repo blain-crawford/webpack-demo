@@ -26,7 +26,18 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction component() {\n  const element = document.createElement('div');\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'Webpacking', 'Fools!'], ' ');\n  return element;\n}\n\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _myName__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myName */ \"./src/myName.js\");\n\n\n\nfunction component() {\n  const element = document.createElement('div');\n  const name = document.createElement('h1');\n  let theGamsH1 = document.createElement('h1');\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'Webpacking', 'Fools!'], ' ');\n  name.innerText = (0,_myName__WEBPACK_IMPORTED_MODULE_1__.myName)('Blain');\n  let gams = new _myName__WEBPACK_IMPORTED_MODULE_1__.Gams('THE GAMS')\n  theGamsH1.innerText = gams.iAm();\n  let myDivs = {name, element, theGamsH1}\n  return myDivs;\n};\n\nlet domPopulator = component();\ndocument.body.appendChild(domPopulator.element);\ndocument.body.appendChild(domPopulator.name);\ndocument.body.appendChild(domPopulator.theGamsH1);\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/myName.js":
+/*!***********************!*\
+  !*** ./src/myName.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"myName\": () => (/* binding */ myName),\n/* harmony export */   \"Gams\": () => (/* binding */ Gams)\n/* harmony export */ });\nconst myName = (name) => {\n  return `Hello!  My name is ${name}!`;\n};\n\nclass Gams {\n  constructor(name) {\n    this.name = name;\n  }\n\n  iAm() {\n    return`I am ${this.name}!`\n  }\n};\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/myName.js?");
 
 /***/ })
 
