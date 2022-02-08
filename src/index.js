@@ -1,15 +1,17 @@
 import _ from 'lodash';
 import {myName, Gams} from './myName';
+import './style.css';
 
 function component() {
   const element = document.createElement('div');
   const name = document.createElement('h1');
   let theGamsH1 = document.createElement('h1');
   element.innerHTML = _.join(['Hello', 'Webpacking', 'Fools!'], ' ');
+  element.classList.add('hello')
   name.innerText = myName('Blain');
-  let gams = new Gams('THE BLAMS')
+  let gams = new Gams('THE BLAMS');
   theGamsH1.innerText = gams.iAm();
-  let myDivs = {name, element, theGamsH1}
+  let myDivs = {name, element, theGamsH1};
   return myDivs;
 };
 
