@@ -9,7 +9,8 @@ function component() {
   element.innerHTML = _.join(['Hello', 'Webpacking', 'Fools!'], ' ');
   element.classList.add('hello')
   name.innerText = myName('Blain');
-  let gams = new Gams('THE BLAMS');
+  let gams = new Gams('THE GAMS');
+  theGamsH1.id = 'gams';
   theGamsH1.innerText = gams.iAm();
   let myDivs = {name, element, theGamsH1};
   return myDivs;

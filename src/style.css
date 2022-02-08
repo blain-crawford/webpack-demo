@@ -4,3 +4,9 @@
   display: inline-block;
   font-size: 50px;
 }
+
+#gams {
+  font-size: 75px;
+  color: green;
+  background-color: red;
+}
