@@ -6,7 +6,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist'
+    // publicPath: 'dist'
   },
   module: {  
     rules: [  
@@ -14,7 +14,11 @@ module.exports = {
         test: /\.css$/i,  
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader']   
-      }  
+      },
+      {
+        test:/\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      }, 
     ]  
   } 
 };

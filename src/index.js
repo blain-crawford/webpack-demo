@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {myName, Gams} from './myName';
 import './style.css';
+import MyImage from './album.jpg'
 
 function component() {
   const element = document.createElement('div');
@@ -12,11 +13,15 @@ function component() {
   let gams = new Gams('THE GAMS');
   theGamsH1.id = 'gams';
   theGamsH1.innerText = gams.iAm();
-  let myDivs = {name, element, theGamsH1};
+  const myIcon = new Image();
+  myIcon.src = MyImage;
+  let myDivs = {name, element, theGamsH1, myIcon};
   return myDivs;
 };
 
 let domPopulator = component();
+
 document.body.appendChild(domPopulator.element);
 document.body.appendChild(domPopulator.name);
 document.body.appendChild(domPopulator.theGamsH1);
+document.body.appendChild(domPopulator.myIcon);

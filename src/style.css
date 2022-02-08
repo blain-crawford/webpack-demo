@@ -8,5 +8,6 @@
 #gams {
   font-size: 75px;
   color: green;
-  background-color: red;
+  background-image: url('./album.jpg');
+  
 }
