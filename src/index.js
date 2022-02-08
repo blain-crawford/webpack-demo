@@ -7,7 +7,7 @@ function component() {
   let theGamsH1 = document.createElement('h1');
   element.innerHTML = _.join(['Hello', 'Webpacking', 'Fools!'], ' ');
   name.innerText = myName('Blain');
-  let gams = new Gams('THE GAMS')
+  let gams = new Gams('THE BLAMS')
   theGamsH1.innerText = gams.iAm();
   let myDivs = {name, element, theGamsH1}
   return myDivs;
